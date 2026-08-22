@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Viral Vault</title>
+
+  <!-- Telegram Mini App SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #111111;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 430px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff1744, #ff6d00);
+      font-size: 34px;
+      font-weight: 900;
+      box-shadow: 0 10px 35px rgba(255, 70, 70, 0.25);
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      border-radius: 20px;
+      padding: 25px 20px;
+      border: 1px solid #2d2d2d;
+    }
+
+    .video-placeholder {
+      height: 210px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #242424, #101010);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .play-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #111111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .video-placeholder p {
+      color: #aaaaaa;
+      font-size: 14px;
+    }
+
+    .watch-btn {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      background: linear-gradient(90deg, #ff1744, #ff6d00);
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .watch-btn:active {
+      transform: scale(0.98);
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #252525;
+      color: #dddddd;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 25px;
+      color: #777777;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <div class="logo">VV</div>
+
+    <h1>Viral Vault</h1>
+
+    <p class="subtitle">
+      🔥 Discover today's viral and trending content.
+    </p>
+
+    <div class="card">
+
+      <div class="video-placeholder">
+        <div class="play-icon">▶</div>
+        <p>Today's Viral Content</p>
+      </div>
+
+      <button class="watch-btn" onclick="watchNow()">
+        ▶ WATCH NOW
+      </button>
+
+      <div class="message" id="message">
+        🔥 Your content is being prepared...
+        <br><br>
+        Monetization will be connected here.
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Viral Vault • New content every day
+    </div>
+
+  </div>
+
+  <script>
+    // Initialize Telegram Mini App
+    const tg = window.Telegram.WebApp;
+
+    tg.ready();
+    tg.expand();
+
+    function watchNow() {
+      const message = document.getElementById("message");
+
+      message.style.display = "block";
+
+      message.innerHTML =
+        "🔥 Watch request received!<br><br>" +
+        "The content/ad system will be connected here.";
+    }
+  </script>
+
+</body>
+</html>
