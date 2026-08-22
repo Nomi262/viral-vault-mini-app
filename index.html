@@ -182,14 +182,26 @@ show_11630111().then(() => {
     tg.expand();
 
     function watchNow() {
+  show_11630111()
+    .then(() => {
       const message = document.getElementById("message");
 
       message.style.display = "block";
 
       message.innerHTML =
-        "🔥 Watch request received!<br><br>" +
-        "The content/ad system will be connected here.";
-    }
+        "🎉 Ad completed!<br><br>" +
+        "🔓 Your content is now unlocked!";
+    })
+    .catch(() => {
+      const message = document.getElementById("message");
+
+      message.style.display = "block";
+
+      message.innerHTML =
+        "⚠️ The ad could not be completed.<br><br>" +
+        "Please try again.";
+    });
+}
   </script>
 
 </body>
