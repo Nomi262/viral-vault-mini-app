@@ -8,15 +8,10 @@
 
   <!-- Telegram Mini App SDK -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-  // Rewarded interstitial
-
-show_11630111().then(() => {
-    // You need to add your user reward function here, which will be executed after the user watches the ad.
-    // For more details, please refer to the detailed instructions.
-    alert('You have seen an ad!');
-})
-
+  
+  <!-- Monetag SDK -->
+<script src='//libtl.com/sdk.js' data-zone='11630111' data-sdk='show_11630111'></script>
+  
   <style>
     * {
       box-sizing: border-box;
