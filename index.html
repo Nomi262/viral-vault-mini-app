@@ -70,15 +70,19 @@
     }
 
     .video-placeholder {
-      height: 210px;
-      border-radius: 15px;
-      background: linear-gradient(135deg, #242424, #101010);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
+  height: 210px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #111111;
+  margin-bottom: 20px;
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
     .play-icon {
       width: 65px;
@@ -148,9 +152,8 @@
     <div class="card">
 
       <div class="video-placeholder">
-        <div class="play-icon">▶</div>
-        <p>Today's Viral Content</p>
-      </div>
+        <img src="cfb_1591532.jpg" alt="Full Video Viral">
+           </div>
 
       <button class="watch-btn" onclick="watchNow()">
         ▶ WATCH NOW
